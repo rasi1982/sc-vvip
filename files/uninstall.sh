@@ -2,11 +2,11 @@
 
 echo ""
 echo "#########################################################"
-echo "## -> HOKAGE LEGEND-Server by HOKAGE-ID Software       ##"
-echo "## -> Author : Hokage Legend                           ##"
-echo "## -> Email : hokagelegend9999@gmail.com               ##"
-echo "## -> Wa    : 087726917005                             ##"
-echo "## -> (c) 2023-2024, Hokage Legend-ID Software         ##"
+echo "## -> ROSI STORE-Server by ROSI-ID Software       ##"
+echo "## -> Author : Rosi Center                           ##"
+echo "## -> Email : fathorrasi1982@gmail.com               ##"
+echo "## -> Wa    : 081931472448                             ##"
+echo "## -> (c) 2024-2025, Rosi Store-ID Software         ##"
 echo "#########################################################"
 echo ""
 
