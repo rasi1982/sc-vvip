@@ -3,7 +3,7 @@
 
 ### INSTALL SCRIPT 
 ```
-apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubusercontent.com/hokagelegend9999/alpha/main/premi.sh && chmod +x premi.sh && ./premi.sh
+apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/premi.sh && chmod +x premi.sh && ./premi.sh
 ```
 
 ## UPDATE SCRIPT
