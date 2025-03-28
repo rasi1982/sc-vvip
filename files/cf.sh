@@ -25,9 +25,9 @@ fi
 clear
 apt install jq curl -y
 ###DOM#AIN=installer.my.id
-DOMAIN=rosicenter.my.id
+DOMAIN=rosicenter5.my.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c6)
-SUB_DOMAIN=${sub}.rosicenter.my.id
+SUB_DOMAIN=${sub}.rosicenter5.my.id
 CF_ID=panwaslublegapilkada@gmail.com
 CF_KEY=1feca5207e3db081a8d69eae9a5015ec5d4f
 ##SUB_DOMAIN=${sub}.installer.my.id
