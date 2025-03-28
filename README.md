@@ -13,7 +13,7 @@ wget -q https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/updat
 
 ### SUPPORT OS LINUX
 - UBUNTU 20.04.05
-- DEBIAN 10
+- DEBIAN 11
 
 ### SETTING CLOUDFLARE
 ```
