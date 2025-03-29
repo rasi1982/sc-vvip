@@ -263,6 +263,7 @@ echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━�
 echo -e "Aktif Selama     : $masaaktif Hari" | tee -a /etc/user-create/user.log
 echo -e "Dibuat Pada      : $tnggl" | tee -a /etc/user-create/user.log
 echo -e "Berakhir Pada    : $expe" | tee -a /etc/user-create/user.log
+echo -e "TERIMAKASIH SUDAH ORDER DI ROSI STORE" | tee -a /etc/user-create/user.log
 echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/user-create/user.log
 read -p "Enter Back To Menu"
 menu
