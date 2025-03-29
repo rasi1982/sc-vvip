@@ -3,12 +3,12 @@
 
 ### INSTALL SCRIPT 
 ```
-apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/premi.sh && chmod +x premi.sh && ./premi.sh
+apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubusercontent.com/rasi1982/sc-vvip/main/premi.sh && chmod +x premi.sh && ./premi.sh
 ```
 
 ## UPDATE SCRIPT
 ```
-wget -q https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/update.sh && chmod +x update.sh && ./update.sh
+wget -q https://raw.githubusercontent.com/rasi1982/sc-vvip/main/update.sh && chmod +x update.sh && ./update.sh
 ```
 
 ### SUPPORT OS LINUX
