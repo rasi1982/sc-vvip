@@ -33,7 +33,7 @@ SERONLINE=$(uptime -p | cut -d " " -f 2-10000)
 clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo ""
-izinsc="https://raw.githubusercontent.com/ROSI STORElegend9999/ijin/main/alpha"
+izinsc="https://raw.githubusercontent.com/rasi1982/1z1n/main/L1cense.txt"
 # USERNAME
 rm -f /usr/bin/user
 username=$(curl ${izinsc} | grep $MYIP | awk '{print $2}')
@@ -235,7 +235,7 @@ kontol
 ;;
 12)
 clear
-wget -q https://raw.githubusercontent.com/ROSI STORElegend9999/beta/main/update.sh
+wget -q https://raw.githubusercontent.com/rasi1982/sc-vvip/main/main/update.sh
 chmod +x update.sh
 ./update.sh
 ;;
