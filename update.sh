@@ -27,13 +27,13 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-    wget https://raw.githubusercontent.com/hokagelegend9999/alpha/main/menu/menu.zip
+    wget https://github.com/rasi1982/sc-vvip/main/menu/menu.zip
     unzip menu.zip
     chmod +x menu/*
     mv menu/* /usr/local/sbin
     rm -rf menu.zip
     rm -rf update.sh
-    wget -qO- fv-tunnel "https://raw.githubusercontent.com/hokagelegend9999/alpha/main/config/fv-tunnel" 
+    wget -qO- fv-tunnel "https://raw.githubusercontent.com/rasi1982/sc-vvip/main/config/fv-tunnel" 
     chmod +x fv-tunnel 
     bash fv-tunnel
     rm -rf fv-tunnel
@@ -46,15 +46,15 @@ res1() {
     rm -rf menu-backup
     rm -rf backup
     rm -rf kontol
-    wget https://raw.githubusercontent.com/hokagelegend9999/alpha/main/menu/menu
-    wget https://raw.githubusercontent.com/hokagelegend9999/alpha/main/menu/m-sshws
-    wget https://raw.githubusercontent.com/hokagelegend9999/alpha/main/menu/addssh
-    wget https://raw.githubusercontent.com/hokagelegend9999/alpha/main/menu/addtr
-    wget https://raw.githubusercontent.com/hokagelegend9999/alpha/main/menu/addss
-    wget https://raw.githubusercontent.com/hokagelegend9999/alpha/main/menu/menu-backup
-    wget https://raw.githubusercontent.com/hokagelegend9999/alpha/main/menu/backup
-    wget https://raw.githubusercontent.com/hokagelegend9999/alpha/main/menu/regis
-    wget https://raw.githubusercontent.com/hokagelegend9999/alpha/main/menu/addhost
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/menu
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/m-sshws
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/addssh
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/addtr
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/addss
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/menu-backup
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/backup
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/regis
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/addhost
     chmod +x menu
     chmod +x m-sshws
     chmod +x addssh
