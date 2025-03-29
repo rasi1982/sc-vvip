@@ -1,8 +1,8 @@
 #!/bin/bash
 # Menu For Script
-# Edition : Stable Edition V1.0
+# Edition : Stable Edition V3.0
 # Auther  : 
-# (C) Copyright 2024-2024
+# (C) Copyright 2024-2025
 # =========================================
 BIBlack='\033[1;90m'      # Black
 BIRed='\033[1;91m'        # Red
