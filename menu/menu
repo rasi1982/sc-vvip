@@ -33,7 +33,7 @@ SERONLINE=$(uptime -p | cut -d " " -f 2-10000)
 clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo ""
-izinsc="https://raw.githubusercontent.com/ROSISTORElegend9999/ijin/main/alpha"
+izinsc="https://raw.githubusercontent.com/rasi1982/1z1n/main/L1cense.txt"
 # USERNAME
 rm -f /usr/bin/user
 username=$(curl ${izinsc} | grep $MYIP | awk '{print $2}')
@@ -202,7 +202,7 @@ echo -e " ${z}│$NC${z} IP ADDRESS ${z}=$NC $IPVPS${NC}"
 echo -e " ${z}│$NC${z} User$NC       ${z}=$NC $username"
 echo -e " ${z}│$NC${z} Exp Script$NC ${z}=$NC $exp $certifacate Days$NC $sts"
 echo -e " ${z}╰══════════════════════════════════════════════════════════╯${NC}"
-echo -e "             ${KIRI}${z}THANKS YOU FOR USING SCRIPT ROSISTORE${z}${KANAN}"
+echo -e "             ${KIRI}${z}THANKS YOU FOR USING SCRIPT ROSI STORE${z}${KANAN}"
 echo -e ""
 read -p " PILIH MENU DENGAN CARA KETIK 1/8 : " opt
 echo -e ""
