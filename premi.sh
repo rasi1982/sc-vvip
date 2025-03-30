@@ -719,11 +719,13 @@ fi
 
 clear
 # banner
-echo "Banner /etc/kyt.txt" >>/etc/ssh/sshd_config
-sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/kyt.txt"@g' /etc/default/dropbear
+echo "Banner /etc/rasi1982.txt" >>/etc/ssh/sshd_config
+sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/rasi1982.txt"@g' /etc/default/dropbear
 
 # Ganti Banner
 wget -O /etc/rasi1982.txt https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/files/issue.net
+sudo chmod 644 /etc/rasi1982.txt
+
 print_success "Fail2ban"
 }
 
