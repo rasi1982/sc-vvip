@@ -28,7 +28,7 @@ echo -e "${YELLOW}----------------------------------------------------------${NC
 echo -e " WELCOME TO ROSI STORE PREMIUM SCRIPT ${YELLOW}(${NC}${green}Stable Edition${NC}${YELLOW})${NC}"
 echo -e " PROSES PENGECEKAN IP ADDRESS ANDA !!"
 echo -e "${purple}----------------------------------------------------------${NC}"
-echo -e " ›AUTHOR : ${green}ROSI STORE <® ${NC}${YELLOW}(${NC}${green}V 3.2${NC}${YELLOW})${NC}"
+echo -e " ›AUTHOR : ${green}ROSI STORE <® ${NC}${YELLOW}(${NC}${green}V 3.0${NC}${YELLOW})${NC}"
 echo -e " ›TEAM 🅥🅝: ROSI STORE ${YELLOW}(${NC} 2025 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
