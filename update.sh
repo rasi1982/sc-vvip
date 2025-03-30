@@ -27,7 +27,7 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-    wget https://github.com/rasi1982/sc-vvip/main/menu/menu.zip
+    wget https://github.com/rasi1982/sc-vvip/raw/refs/heads/main/menu/menu.zip
     unzip menu.zip
     chmod +x menu/*
     mv menu/* /usr/local/sbin
