@@ -27,21 +27,23 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-    wget https://github.com/rasi1982/sc-vvip/raw/refs/heads/main/menu/menu.zip
+    print_install "Memasang Menu Packet"
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/menu.zip
     unzip menu.zip
-    chmod +x menu/*
-    mv menu/* /usr/local/sbin
-    rm -rf menu.zip
-    rm -rf update.sh
+    sudo  mv menu/* /usr/local/sbin
+    sudo chmod +x /usr/local/sbin/*
     wget -qO- fv-tunnel "https://raw.githubusercontent.com/rasi1982/sc-vvip/main/config/fv-tunnel" 
     chmod +x fv-tunnel 
     bash fv-tunnel
     rm -rf fv-tunnel
 }
 function noobzvpn() {
-wget "${REPO}/noobzvpns.zip"
+wget "https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main//noobzvpns.zip"
 unzip noobzvpns.zip
+cd noobzvpns
 bash install.sh
+cd
+rm -r noobzvpns
 rm noobzvpns.zip
 systemctl restart noobzvpns
 print_success "NOOBZVPN"
