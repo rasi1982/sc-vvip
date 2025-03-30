@@ -37,35 +37,6 @@ res1() {
     chmod +x fv-tunnel 
     bash fv-tunnel
     rm -rf fv-tunnel
-    cd /usr/local/sbin
-    rm -rf menu
-    rm -rf m-sshws
-    rm -rf addssh
-    rm -rf addtr
-    rm -rf addss
-    rm -rf menu-backup
-    rm -rf backup
-    rm -rf kontol
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/menu
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/m-sshws
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/addssh
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/addtr
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/addss
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/menu-backup
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/backup
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/regis
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/main/menu/addhost
-    chmod +x menu
-    chmod +x m-sshws
-    chmod +x addssh
-    chmod +x addtr
-    chmod +x addss
-    chmod +x menu-backup
-    chmod +x backup
-    chmod +x regis
-    chmod +x addhost
-    
-   
 }
 function noobzvpn() {
 wget "${REPO}/noobzvpns.zip"
