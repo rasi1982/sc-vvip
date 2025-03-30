@@ -1,10 +1,11 @@
 
-![Screenshot 2024-06-05 082544](https://github.com/hokagelegend9999/alpha/assets/158546743/ee0b4e39-3384-4cb9-bf74-ba72b89a2a43)
+![rasi](https://github.com/user-attachments/assets/39381b1a-1c64-4339-95ca-ccf06c012176)
 
 ### INSTALL SCRIPT 
 ```
 apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubusercontent.com/rasi1982/sc-vvip/main/premi.sh && chmod +x premi.sh && ./premi.sh
 ```
+
 
 ## UPDATE SCRIPT
 ```
