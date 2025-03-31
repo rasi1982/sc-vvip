@@ -27,23 +27,52 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-    print_install "Memasang Menu Packet"
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/menu.zip
+    wget https://github.com/rasi1982/sc-vvip/raw/refs/heads/main/menu/menu.zip
     unzip menu.zip
-    sudo  mv menu/* /usr/local/sbin
-    sudo chmod +x /usr/local/sbin/*
-    wget -qO- fv-tunnel "https://raw.githubusercontent.com/rasi1982/sc-vvip/main/config/fv-tunnel" 
+    chmod +x menu/*
+    mv menu/* /usr/local/sbin
+    rm -rf menu.zip
+    rm -rf update.sh
+    wget -qO- fv-tunnel "https://github.com/rasi1982/sc-vvip/raw/refs/heads/main/config/fv-tunnel" 
     chmod +x fv-tunnel 
     bash fv-tunnel
     rm -rf fv-tunnel
+    cd /usr/local/sbin
+    rm -rf menu
+    rm -rf m-sshws
+    rm -rf addssh
+    rm -rf addtr
+    rm -rf addss
+    rm -rf menu-backup
+    rm -rf backup
+    rm -rf kontol
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/menu
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-sshws
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/addssh
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/addtr
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/addss
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu-backup
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/backup
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/regis
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/addhost
+    chmod +x menu
+    chmod +x m-sshws
+    chmod +x addssh
+    chmod +x addtr
+    chmod +x addss
+    chmod +x menu-backup
+    chmod +x backup
+    chmod +x regis
+    chmod +x addhost
+    
+   
 }
 function noobzvpn() {
-wget "https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main//noobzvpns.zip"
+wget "${REPO}/noobzvpns.zip"
 unzip noobzvpns.zip
 cd noobzvpns
 bash install.sh
 cd
-rm -r noobzvpns
 rm noobzvpns.zip
 systemctl restart noobzvpns
 print_success "NOOBZVPN"
