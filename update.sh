@@ -32,6 +32,7 @@ res1() {
     chmod +x fv-tunnel 
     bash fv-tunnel
     rm -rf fv-tunnel
+    
     cd /usr/local/sbin
     rm -rf menu
     rm -rf m-sshws
@@ -96,6 +97,8 @@ res1() {
     rm -rf trialvless
     rm -rf trialws
     rm -rf trial
+    rm -rf xp
+    rm -rf z9dtrial
 
     
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/menu
@@ -160,6 +163,8 @@ res1() {
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/trialtr
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/trialvless
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/trialws
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/xp
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/z9dtrial
     
     
     chmod +x menu
@@ -224,6 +229,8 @@ res1() {
     chmod +x trialvless
     chmod +x trialws
     chmod +x trial
+    chmod +x xp
+    chmod +x z9dtrial
    
 }
 function noobzvpn() {
