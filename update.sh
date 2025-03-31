@@ -65,14 +65,14 @@ res1() {
     rm -rf menu-x
     rm -rf autoreboot
     rm -rf bot
-   rm -rf bw
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/ceklim
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/cekss
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/cekssh
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/cektr
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/cekvless
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/cekws
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/clearcache
+    rm -rf bw
+    rm -rf ceklim
+    rm -rf cekss
+    rm -rf cekssh
+    rm -rf cektr
+    rm -rf cekvless
+    rm -rf cekws
+    rm -rf clearcache
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/clearlog
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/del-bot-notif
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/delexp
