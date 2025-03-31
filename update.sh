@@ -98,6 +98,14 @@ res1() {
     rm -rf trial
     rm -rf xp
     rm -rf z9dtrial
+    rm -rf restart-bot
+    rm -rf restore
+    rm -rf run
+    rm -rf sd
+    rm -rf speedtest
+    rm -rf stop-bot
+    rm -rf tendang
+    rm -rf tunnel
 
     
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/menu
@@ -163,6 +171,15 @@ res1() {
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/trialws
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/xp
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/z9dtrial
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/restart-bot
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/restore
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/run
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/sd
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/speedtest
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/stop-bot
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/tendang
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/tunnel
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/unlock
     
     
     chmod +x menu
@@ -228,6 +245,14 @@ res1() {
     chmod +x trial
     chmod +x xp
     chmod +x z9dtrial
+    chmod +x restart-bot
+    chmod +x restore
+    chmod +x run
+    chmod +x d
+    chmod +x speedtest
+    chmod +x stop-bot
+    chmod +x tendang
+    chmod +x tunnel
     
    
 }
