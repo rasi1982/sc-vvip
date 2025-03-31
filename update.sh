@@ -82,7 +82,6 @@ res1() {
     rm -rf limit-ip-ssh
     rm -rf limitspeed
     rm -rf lock
-    rm -rf m-sshws
     rm -rf member
     rm -rf member-ws
     rm -rf prot
@@ -258,5 +257,6 @@ echo -e "  \033[1;91m Update Script Service\033[1;37m"
 fun_bar 'res1'
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | lolcat
 echo -e ""
+rm update.sh
 read -n 1 -s -r -p "Press [ Enter ] to back on menu"
 menu
