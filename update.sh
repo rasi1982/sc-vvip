@@ -46,6 +46,56 @@ res1() {
     rm -rf menu-backup
     rm -rf backup
     rm -rf kontol
+    rm -rf regis
+    rm -rf addhost
+    rm -rf add-bot-notif
+    rm -rf addvless
+    rm -rf addws
+    rm -rf autokill
+    rm -rf m-bot
+    rm -rf m-noob
+    rm -rf m-ssws
+    rm -rf m-trial
+    rm -rf m-trojan
+    rm -rf m-vless
+    rm -rf m-vmess
+    rm -rf mbot-backup
+    rm -rf mbot-panel
+    rm -rf menu-backup
+    rm -rf menu-x
+    rm -rf autoreboot
+    rm -rf bot
+   rm -rf bw
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/ceklim
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/cekss
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/cekssh
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/cektr
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/cekvless
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/cekws
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/clearcache
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/clearlog
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/del-bot-notif
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/delexp
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/delss
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/delssh
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/deltr
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/delvless
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/delws
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/fixcert
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/hapus-bot
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/limit-ip-ssh
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/limitspeed
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/lock
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-sshws
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/member
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/member-ws
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/prot
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/renewss
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/renewssh
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/renewtr
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/renewvless
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/renewws
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/reset
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/menu
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-sshws
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/addssh
