@@ -138,6 +138,30 @@ res1() {
     chmod +x cektr
     chmod +x cekvless
     chmod +x cekws
+    chmod +x clearcache
+    chmod +x clearlog
+    chmod +x del-bot-notif
+    chmod +x delexp
+    chmod +x delss
+    chmod +x delssh
+    chmod +x deltr
+    chmod +x delvless
+    chmod +x delws
+    chmod +x fixcert
+    chmod +x hapus-bot
+    chmod +x limit-ip-ssh
+    chmod +x limitspeed
+    chmod +x lock
+    chmod +x m-sshws
+    chmod +x member
+    chmod +x member-ws
+    chmod +x prot
+    chmod +x renewss
+    chmod +x renewssh
+    chmod +x renewtr
+    chmod +x renewvless
+    chmod +x renewws
+    chmod +x reset
    
 }
 function noobzvpn() {
