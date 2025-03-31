@@ -1,13 +1,14 @@
 
 ![rasi](https://github.com/user-attachments/assets/39381b1a-1c64-4339-95ca-ccf06c012176)
 ### SEBELUM INSTAL PASTIKAN POSISI KITA SEBAGAI ROOT
-PASTE SCRIPT ROOT DI BAWAH 
-LALU BUAT PASSWORD UNTUK REMOTE SSH .
-lalu remote ssh kita
-MASUK DENGAN DENGA 
-IP VPS
-USER : root 
-PASSWORD : (Yang kita buat tadi ) 
+
+1.PASTE SCRIPT ROOT DI BAWAH 
+2.BUAT PASSWORD UNTUK REMOTE SSH .
+3.Remote SSH kita
+  MASUK DENGAN 
+  IP VPS  :
+  USER : root 
+  PASSWORD : (Yang kita buat tadi ) 
 
 ```
 
