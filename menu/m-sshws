@@ -81,7 +81,7 @@ case $menu in
     addssh
     ;;
 2)
-    trial
+    m-trial
     ;;
 3)
     renewssh
