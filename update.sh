@@ -95,6 +95,7 @@ res1() {
     rm -rf trialtr
     rm -rf trialvless
     rm -rf trialws
+    rm -rf trial
 
     
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/menu
@@ -154,6 +155,7 @@ res1() {
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/renewvless
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/renewws
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/reset
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/trial
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/trialss
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/trialtr
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/trialvless
@@ -221,6 +223,7 @@ res1() {
     chmod +x trialtr
     chmod +x trialvless
     chmod +x trialws
+    chmod +x trial
    
 }
 function noobzvpn() {
