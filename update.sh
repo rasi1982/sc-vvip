@@ -231,6 +231,7 @@ res1() {
     chmod +x trial
     chmod +x xp
     chmod +x z9dtrial
+     rm -rf update.sh
    
 }
 function noobzvpn() {
