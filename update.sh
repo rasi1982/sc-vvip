@@ -55,6 +55,21 @@ res1() {
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/backup
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/regis
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/addhost
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/add-bot-notif
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/addvless
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/addws
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/autokill
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-bot
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-noob
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-ssws
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-trial
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-trojan
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-vless
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-vmess
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/mbot-backup
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/mbot-panel
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/menu-backup
+    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/menu-x
     chmod +x menu
     chmod +x m-sshws
     chmod +x addssh
@@ -64,6 +79,21 @@ res1() {
     chmod +x backup
     chmod +x regis
     chmod +x addhost
+    chmod +x add-bot-notif
+    chmod +x addvless
+    chmod +x addws
+    chmod +x autokill
+    chmod +x m-bot
+    chmod +x m-noob
+    chmod +x m-ssws
+    chmod +x m-trial
+    chmod +x m-trojan
+    chmod +x m-vless
+    chmod +x m-vmess
+    chmod +x mbot-backup
+    chmod +x mbot-panel
+    chmod +x menu-backup
+    chmod +x menu-x
     
    
 }
