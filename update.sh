@@ -147,7 +147,6 @@ res1() {
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/limit-ip-ssh
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/limitspeed
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/lock
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-sshws
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/member
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/member-ws
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/prot
@@ -257,6 +256,7 @@ echo -e "  \033[1;91m Update Script Service\033[1;37m"
 fun_bar 'res1'
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | lolcat
 echo -e ""
-rm update.sh
+cd /root
+rm -rf update.sh
 read -n 1 -s -r -p "Press [ Enter ] to back on menu"
 menu
