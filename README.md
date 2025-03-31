@@ -11,7 +11,7 @@ PASSWORD : (Yang kita buat tadi )
 
 ```
 
-  wget -qO- -O aksesroot.sh https://raw.githubusercontent.com/hokagelegend9999/alpha/refs/heads/main/aksesroot.sh && bash aksesroot.sh
+  wget -qO- -O aksesroot.sh https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/aksesroot.sh && bash aksesroot.sh
 
 ```
 
