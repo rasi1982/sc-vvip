@@ -212,7 +212,6 @@ res1() {
     chmod +x limit-ip-ssh
     chmod +x limitspeed
     chmod +x lock
-    chmod +x m-sshws
     chmod +x member
     chmod +x member-ws
     chmod +x prot
