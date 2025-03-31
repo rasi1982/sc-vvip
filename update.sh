@@ -91,6 +91,8 @@ res1() {
     rm -rf renewvless
     rm -rf renewws
     rm -rf reset
+
+    
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/menu
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-sshws
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/addssh
