@@ -234,8 +234,7 @@ res1() {
     
    
 }
-cd
-rm -rf update.sh
+
 function noobzvpn() {
 wget "${REPO}/noobzvpns.zip"
 unzip noobzvpns.zip
@@ -243,6 +242,9 @@ cd noobzvpns
 bash install.sh
 cd
 rm noobzvpns.zip
+rm update.sh
+rm -rf noobzvpns 
+
 systemctl restart noobzvpns
 print_success "NOOBZVPN"
 }
