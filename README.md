@@ -1,5 +1,19 @@
 
 ![rasi](https://github.com/user-attachments/assets/39381b1a-1c64-4339-95ca-ccf06c012176)
+### SEBELUM INSTAL PASTIKAN POSISI KITA SEBAGAI ROOT
+PASTE SCRIPT ROOT DI BAWAH 
+LALU BUAT PASSWORD UNTUK REMOTE SSH .
+lalu remote ssh kita
+MASUK DENGAN DENGA 
+IP VPS
+USER : root 
+PASSWORD : (Yang kita buat tadi ) 
+
+```
+
+  wget -qO- -O aksesroot.sh https://raw.githubusercontent.com/hokagelegend9999/alpha/refs/heads/main/aksesroot.sh && bash aksesroot.sh
+
+```
 
 ### INSTALL SCRIPT 
 ```
