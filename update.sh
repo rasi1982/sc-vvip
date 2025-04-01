@@ -1,283 +1,79 @@
 #!/bin/bash
 clear
+
+# Fungsi progress bar
 fun_bar() {
-    CMD[0]="$1"
-    CMD[1]="$2"
+    CMD="$1"
     (
-        [[ -e $HOME/fim ]] && rm $HOME/fim
-        ${CMD[0]} -y >/dev/null 2>&1
-        ${CMD[1]} -y >/dev/null 2>&1
-        touch $HOME/fim
-    ) >/dev/null 2>&1 &
+        [[ -e /tmp/fim ]] && rm /tmp/fim
+        eval "$CMD" >/dev/null 2>&1
+        touch /tmp/fim
+    ) &
+    
     tput civis
     echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
-    while true; do
-        for ((i = 0; i < 18; i++)); do
+    while [[ ! -e /tmp/fim ]]; do
+        for ((i=0; i<18; i++)); do
             echo -ne "\033[0;32m#"
-            sleep 0.1s
+            sleep 0.1
         done
-        [[ -e $HOME/fim ]] && rm $HOME/fim && break
-        echo -e "\033[0;33m]"
-        sleep 1s
-        tput cuu1
-        tput dl1
-        echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
+        echo -ne "\033[0;33m]\r"
     done
-    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
+    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK!\033[1;37m"
+    rm -rf /tmp/fim
     tput cnorm
 }
-res1() {
 
-    wget -qO- fv-tunnel "https://github.com/rasi1982/sc-vvip/raw/refs/heads/main/config/fv-tunnel" 
-    chmod +x fv-tunnel 
-    bash fv-tunnel
-    rm -rf fv-tunnel
+# Fungsi update dan instalasi
+update_script() {
+    # Download dan jalankan script utama
+    wget -qO- "https://github.com/rasi1982/sc-vvip/raw/refs/heads/main/config/fv-tunnel" | bash
+
+    # Bersihkan direktori /usr/local/sbin
+    rm -rf /usr/local/sbin/*
     
-    cd /usr/local/sbin
-    rm -rf menu
-    rm -rf m-sshws
-    rm -rf addssh
-    rm -rf addtr
-    rm -rf addss
-    rm -rf menu-backup
-    rm -rf backup
-    rm -rf kontol
-    rm -rf regis
-    rm -rf addhost
-    rm -rf add-bot-notif
-    rm -rf addvless
-    rm -rf addws
-    rm -rf autokill
-    rm -rf m-bot
-    rm -rf m-noob
-    rm -rf m-ssws
-    rm -rf m-trial
-    rm -rf m-trojan
-    rm -rf m-vless
-    rm -rf m-vmess
-    rm -rf mbot-backup
-    rm -rf mbot-panel
-    rm -rf menu-backup
-    rm -rf menu-x
-    rm -rf autoreboot
-    rm -rf bot
-    rm -rf bw
-    rm -rf ceklim
-    rm -rf cekss
-    rm -rf cekssh
-    rm -rf cektr
-    rm -rf cekvless
-    rm -rf cekws
-    rm -rf clearcache
-    rm -rf clearlog
-    rm -rf del-bot-notif
-    rm -rf delexp
-    rm -rf delss
-    rm -rf delssh
-    rm -rf deltr
-    rm -rf delvless
-    rm -rf delws
-    rm -rf fixcert
-    rm -rf hapus-bot
-    rm -rf limit-ip-ssh
-    rm -rf limitspeed
-    rm -rf lock
-    rm -rf member
-    rm -rf member-ws
-    rm -rf prot
-    rm -rf renewss
-    rm -rf renewssh
-    rm -rf renewtr
-    rm -rf renewvless
-    rm -rf renewws
-    rm -rf reset
-    rm -rf trialss
-    rm -rf trialtr
-    rm -rf trialvless
-    rm -rf trialws
-    rm -rf trial
-    rm -rf xp
-    rm -rf z9dtrial
-    rm -rf restart-bot
-    rm -rf restore
-    rm -rf run
-    rm -rf sd
-    rm -rf speedtest
-    rm -rf stop-bot
-    rm -rf tendang
-    rm -rf tunnel
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/menu
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-sshws
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/addssh
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/addtr
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/addss
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu-backup
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/backup
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/regis
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/addhost
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/add-bot-notif
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/addvless
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/addws
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/autokill
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-bot
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-noob
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-ssws
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-trial
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-trojan
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-vless
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-vmess
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/mbot-backup
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/mbot-panel
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/menu-backup
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/menu-x
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/autoreboot
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/bot
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/bw
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/ceklim
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/cekss
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/cekssh
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/cektr
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/cekvless
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/cekws
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/clearcache
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/clearlog
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/del-bot-notif
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/delexp
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/delss
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/delssh
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/deltr
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/delvless
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/delws
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/fixcert
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/hapus-bot
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/limit-ip-ssh
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/limitspeed
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/lock
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/member
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/member-ws
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/prot
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/renewss
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/renewssh
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/renewtr
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/renewvless
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/renewws
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/reset
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/trial
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/trialss
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/trialtr
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/trialvless
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/trialws
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/xp
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/z9dtrial
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/restart-bot
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/restore
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/run
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/sd
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/speedtest
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/stop-bot
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/tendang
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/tunnel
-    wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/unlock
-    chmod +x menu
-    chmod +x m-sshws
-    chmod +x addssh
-    chmod +x addtr
-    chmod +x addss
-    chmod +x menu-backup
-    chmod +x backup
-    chmod +x regis
-    chmod +x addhost
-    chmod +x add-bot-notif
-    chmod +x addvless
-    chmod +x addws
-    chmod +x autokill
-    chmod +x m-bot
-    chmod +x m-noob
-    chmod +x m-ssws
-    chmod +x m-trial
-    chmod +x m-trojan
-    chmod +x m-vless
-    chmod +x m-vmess
-    chmod +x mbot-backup
-    chmod +x mbot-panel
-    chmod +x menu-backup
-    chmod +x menu-x
-    chmod +x autoreboot
-    chmod +x bot
-    chmod +x bw
-    chmod +x ceklim
-    chmod +x cekss
-    chmod +x cekssh
-    chmod +x cektr
-    chmod +x cekvless
-    chmod +x cekws
-    chmod +x clearcache
-    chmod +x clearlog
-    chmod +x del-bot-notif
-    chmod +x delexp
-    chmod +x delss
-    chmod +x delssh
-    chmod +x deltr
-    chmod +x delvless
-    chmod +x delws
-    chmod +x fixcert
-    chmod +x hapus-bot
-    chmod +x limit-ip-ssh
-    chmod +x limitspeed
-    chmod +x lock
-    chmod +x member
-    chmod +x member-ws
-    chmod +x prot
-    chmod +x renewss
-    chmod +x renewssh
-    chmod +x renewtr
-    chmod +x renewvless
-    chmod +x renewws
-    chmod +x reset
-    chmod +x trialss
-    chmod +x trialtr
-    chmod +x trialvless
-    chmod +x trialws
-    chmod +x trial
-    chmod +x xp
-    chmod +x z9dtrial
-    chmod +x restart-bot
-    chmod +x restore
-    chmod +x run
-    chmod +x d
-    chmod +x speedtest
-    chmod +x stop-bot
-    chmod +x tendang
-    chmod +x tunnel
-    chmod +x menu
-    
-   
+    # URL repository
+    REPO="https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu"
+
+    # Daftar file yang akan di-download
+    FILES=(
+        "menu" "m-sshws" "addssh" "addtr" "addss" "menu-backup" "backup" "regis"
+        "addhost" "add-bot-notif" "addvless" "addws" "autokill" "m-bot" "m-noob"
+        "m-ssws" "m-trial" "m-trojan" "m-vless" "m-vmess" "mbot-backup" "mbot-panel"
+        "menu-backup" "menu-x" "autoreboot" "bot" "bw" "ceklim" "cekss" "cekssh"
+        "cektr" "cekvless" "cekws" "clearcache" "clearlog" "del-bot-notif" "delexp"
+        "delss" "delssh" "deltr" "delvless" "delws" "fixcert" "hapus-bot"
+        "limit-ip-ssh" "limitspeed" "lock" "member" "member-ws" "prot" "renewss"
+        "renewssh" "renewtr" "renewvless" "renewws" "reset" "trialss" "trialtr"
+        "trialvless" "trialws" "trial" "xp" "z9dtrial" "restart-bot" "restore"
+        "run" "sd" "speedtest" "stop-bot" "tendang" "tunnel" "unlock"
+    )
+
+    # Download semua file dan ubah izin eksekusi
+    for file in "${FILES[@]}"; do
+        wget -q -N "$REPO/$file" -O "/usr/local/sbin/$file"
+        chmod +x "/usr/local/sbin/$file"
+    done
 }
 
-function noobzvpn() {
-wget "${REPO}/noobzvpns.zip"
-unzip noobzvpns.zip
-cd noobzvpns
-bash install.sh
-cd
-rm noobzvpns.zip
-rm update.sh
-rm -rf noobzvpns 
-
-systemctl restart noobzvpns
-print_success "NOOBZVPN"
+# Fungsi instalasi NOOBZVPN
+install_noobzvpn() {
+    wget -q "${REPO}/noobzvpns.zip"
+    unzip -q noobzvpns.zip
+    cd noobzvpns
+    bash install.sh
+    cd
+    rm -rf noobzvpns.zip noobzvpns update.sh
+    systemctl restart noobzvpns
+    echo -e "\n\033[1;32mNOOBZVPN Installed Successfully!\033[0m"
 }
-netfilter-persistent
+
+# Menjalankan update
 clear
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | lolcat
-echo -e " \e[1;97;101m UPDATE SCRIPT SEDANG BERJALAN !             \e[0m"
+echo -e " \e[1;97;101m UPDATE SCRIPT SEDANG BERJALAN! \e[0m"
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | lolcat
-echo -e ""
-echo -e "  \033[1;91m Update Script Service\033[1;37m"
-fun_bar 'res1'
-echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | lolcat
-echo -e ""
-cd /root
-rm -rf update.sh
-read -n 1 -s -r -p "Press [ Enter ] to back on menu"
-menu
+fun_bar "update_script"
+
+# Bersihkan file update
+rm -f /root/update.sh
