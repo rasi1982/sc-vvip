@@ -91,8 +91,8 @@ read -p " Limit Quota : " Quota
 read -p " Expired Days : " masaaktif
 #limitip
 if [[ $iplimit -gt 0 ]]; then
-mkdir -p /etc/hokage/limit/ssh/ip
-echo -e "$iplimit" > /etc/hokage/limit/ssh/ip/$Login
+mkdir -p /etc/kyt/limit/ssh/ip
+echo -e "$iplimit" > /etc/kyt/limit/ssh/ip/$Login
 else
 echo > /dev/null
 fi
