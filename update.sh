@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 
-# Fungsi progress bar yang lebih aman
+# Fungsi progress bar
 fun_bar() {
     CMD="$1"
     rm -f /tmp/fim
@@ -33,8 +33,10 @@ update_script() {
         echo -e "\n\033[1;32mRunning update script...\033[0m"
         bash /tmp/update.sh
         rm -f /tmp/update.sh
-        echo -e "\n\033[1;32mUpdate selesai! Skrip akan keluar secara otomatis.\033[0m"
-        sleep 3
+
+        echo -e "\n\033[1;32mUpdate selesai! Menjalankan perintah menu...\033[0m"
+        sleep 2
+        menu  # Menjalankan perintah menu
         exit
     else
         echo -e "\n\033[1;31mUpdate gagal! File update.sh tidak ditemukan.\033[0m"
