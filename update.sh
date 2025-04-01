@@ -106,8 +106,6 @@ res1() {
     rm -rf stop-bot
     rm -rf tendang
     rm -rf tunnel
-
-    
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/menu
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/m-sshws
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/addssh
@@ -180,8 +178,6 @@ res1() {
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/tendang
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/tunnel
     wget https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/unlock
-    
-    
     chmod +x menu
     chmod +x m-sshws
     chmod +x addssh
