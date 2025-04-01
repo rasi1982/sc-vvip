@@ -1,18 +1,17 @@
 #!/bin/bash
 clear
 
-# Fungsi progress bar
+# Fungsi progress bar yang lebih aman
 fun_bar() {
     CMD="$1"
+    rm -f /tmp/fim
     (
-        rm -f /tmp/fim
-        eval "$CMD" >/dev/null 2>&1
-        touch /tmp/fim
+        eval "$CMD" >/dev/null 2>&1 && touch /tmp/fim
     ) &
 
     tput civis
     echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
-    while [[ ! -e /tmp/fim ]]; do
+    while [[ ! -f /tmp/fim ]]; do
         for ((i=0; i<18; i++)); do
             echo -ne "\033[0;32m#"
             sleep 0.1
