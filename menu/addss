@@ -67,7 +67,7 @@ checking_sc
 clear
 sspwd=$(cat /etc/xray/passwd)
 clear
-source /var/lib/hokage/ipvps.conf
+source /var/lib/kyt/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
