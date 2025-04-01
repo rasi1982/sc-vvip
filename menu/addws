@@ -67,7 +67,7 @@ checking_sc() {
 }
 checking_sc
 clear
-source /var/lib/hokage/ipvps.conf
+source /var/lib/kyt/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
