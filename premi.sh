@@ -312,7 +312,7 @@ sts="${Error}"
 fi
 TIMES="10"
 CHATID="1469244768"
-KEY="5504591455:AAE55jbVXpkWpQL6zoktBC-2rUgIGRnCpSg"
+KEY="7534957646:AAGc_m_wAgCcwkUaCn0sPNFvRrnfBi_2Ez4"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 ISP=$(cat /root/.isp)
 CITY=$(cat /root/.city)
@@ -815,12 +815,7 @@ print_success "All Packet"
 function menu(){
     clear
     print_install "Memasang Menu Packet"
-    wget ${REPO}menu/menu.zip
-    unzip menu.zip
-    chmod +x menu/*
-    mv menu/* /usr/local/sbin
-    rm -rf menu
-    rm -rf menu.zip
+    wget https://github.com/rasi1982/sc-vvip/raw/refs/heads/main/update.sh
 }
 
 # Membaut Default Menu 
