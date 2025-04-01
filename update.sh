@@ -9,7 +9,7 @@ fun_bar() {
         eval "$CMD" >/dev/null 2>&1
         touch /tmp/fim
     ) &
-    
+
     tput civis
     echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
     while [[ ! -e /tmp/fim ]]; do
@@ -77,3 +77,8 @@ fun_bar "update_script"
 
 # Bersihkan file update
 rm -f /root/update.sh
+
+# Tampilkan pesan sukses dan tutup terminal
+echo -e "\n\033[1;32mUpdate selesai! Skrip akan keluar secara otomatis.\033[0m"
+sleep 3
+exit
