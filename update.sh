@@ -253,6 +253,7 @@ res1() {
     chmod +x stop-bot
     chmod +x tendang
     chmod +x tunnel
+    chmod +x menu
     
    
 }
