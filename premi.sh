@@ -809,13 +809,21 @@ rm -f /root/openvpn
 rm -f /root/key.pem
 rm -f /root/cert.pem
 print_success "All Packet"
-}
+cd
+rm -f /root/openvpn
+rm -f /root/key.pem
+rm -f /root/cert.pem
 
-#Instal Menu
-function menu(){
-    clear
-    print_install "Memasang Menu Packet"
-    wget https://github.com/rasi1982/sc-vvip/raw/refs/heads/main/update.sh
+# Menampilkan pesan sukses jika fungsi print_success sudah ada
+if command -v print_success &> /dev/null; then
+    print_success "All Packet"
+fi
+
+# Instal Menu - Jalankan update
+wget -qO /tmp/update.sh "https://github.com/rasi1982/sc-vvip/raw/refs/heads/main/update.sh"
+chmod +x /tmp/update.sh
+bash /tmp/update.sh
+rm -f /tmp/update.sh
 }
 
 # Membaut Default Menu 
