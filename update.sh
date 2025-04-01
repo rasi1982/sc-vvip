@@ -33,7 +33,7 @@ update_script() {
     rm -rf /usr/local/sbin/*
     
     # URL repository
-    REPO="https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu"
+    REPO="https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/"
 
     # Daftar file yang akan di-download
     FILES=(
