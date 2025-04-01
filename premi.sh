@@ -312,7 +312,7 @@ sts="${Error}"
 fi
 TIMES="10"
 CHATID="1469244768"
-KEY="7534957646:AAGc_m_wAgCcwkUaCn0sPNFvRrnfBi_2Ez4"
+KEY="5504591455:AAE55jbVXpkWpQL6zoktBC-2rUgIGRnCpSg"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 ISP=$(cat /root/.isp)
 CITY=$(cat /root/.city)
@@ -331,7 +331,7 @@ TIMEZONE=$(printf '%(%H:%M:%S)T')
 <b> HOKAGE LEGEND VPN STORE SCRIPT  </b>
 <code>─────────────────────────────</code>
 <i>Automatic Notifications From Github</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"t.me/ohmyvillain"}]]}' 
+"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"t.me/hokagevpnpremium"}]]}' 
 
     curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
@@ -834,7 +834,7 @@ if [ "$BASH" ]; then
     fi
 fi
 mesg n || true
-welcome
+menu
 EOF
 mkdir -p /root/.info
 curl -sS "ipinfo.io/org?token=7a814b6263b02c" > /root/.info/.isp
@@ -915,7 +915,71 @@ EOF
     fi
 print_success "Menu Packet"
 }
+# Install paket yang diperlukan
+apt update
+apt install -y screen curl
+# Membuat service untuk menjalankan menu otomatis
+cat >/etc/systemd/system/menu.service <<EOF
+[Unit]
+Description=Menjalankan script menu setelah boot
+After=multi-user.target
 
+[Service]
+ExecStart=/usr/bin/screen -dmS menu_session /usr/local/sbin/menu
+Restart=always
+RestartSec=5
+User=root
+WorkingDirectory=/root
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Mengaktifkan dan menjalankan service
+systemctl daemon-reload
+systemctl enable menu.service
+systemctl start menu.service
+
+# Membuat cron jobs
+cat >/etc/cron.d/xp_all <<EOF
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+2 0 * * * root /usr/local/sbin/xp
+EOF
+
+cat >/etc/cron.d/logclean <<EOF
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+*/20 * * * * root /usr/local/sbin/clearlog
+EOF
+
+cat >/etc/cron.d/daily_reboot <<EOF
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+0 5 * * * root /sbin/reboot
+EOF
+
+cat >/etc/cron.d/limit_ip <<EOF
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+*/2 * * * * root /usr/local/sbin/limit-ip
+EOF
+
+cat >/etc/cron.d/lim-ip-ssh <<EOF
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+*/1 * * * * root /usr/local/sbin/limit-ip-ssh
+EOF
+
+cat >/etc/cron.d/limit_ip2 <<EOF
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+*/2 * * * * root /usr/bin/limit-ip
+EOF
+
+echo "*/1 * * * * root echo -n > /var/log/nginx/access.log" >/etc/cron.d/log.nginx
+echo "*/1 * * * * root echo -n > /var/log/xray/access.log" >>/etc/cron.d/log.xray
+echo "OTOMATIS MENU TELAH DI PASANG."
 # Restart layanan after install
 function enable_services(){
 clear
