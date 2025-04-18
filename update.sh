@@ -29,24 +29,6 @@ update_script() {
     # Download dan jalankan script utama
     wget -qO- "https://github.com/rasi1982/sc-vvip/raw/refs/heads/main/config/fv-tunnel" | bash
 
-    # Bersihkan direktori /usr/local/sbin
-    rm -rf /usr/local/sbin/*
-    
-    # URL repository
-    REPO="https://raw.githubusercontent.com/rasi1982/sc-vvip/refs/heads/main/menu/"
-
-    # Daftar file yang akan di-download
-    FILES=(
-        "menu" "m-sshws" "addssh" "addtr" "addss" "menu-backup" "backup" "regis"
-        "addhost" "add-bot-notif" "addvless" "addws" "autokill" "m-bot" "m-noob"
-        "m-ssws" "m-trial" "m-trojan" "m-vless" "m-vmess" "mbot-backup" "mbot-panel"
-        "menu-backup" "menu-x" "autoreboot" "bot" "bw" "ceklim" "cekss" "cekssh"
-        "cektr" "cekvless" "cekws" "clearcache" "clearlog" "del-bot-notif" "delexp"
-        "delss" "delssh" "deltr" "delvless" "delws" "fixcert" "hapus-bot"
-        "limit-ip-ssh" "limitspeed" "lock" "member" "member-ws" "prot" "renewss"
-        "renewssh" "renewtr" "renewvless" "renewws" "reset" "trialss" "trialtr"
-        "trialvless" "trialws" "trial" "xp" "z9dtrial" "restart-bot" "restore"
-        "run" "sd" "speedtest" "stop-bot" "tendang" "tunnel" "unlock"
     )
 
     # Download semua file dan ubah izin eksekusi
