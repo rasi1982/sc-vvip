@@ -257,7 +257,7 @@ echo $host1 > /root/domain
 echo ""
 elif [[ $host == "2" ]]; then
 #install cf
-wget ${REPO}files/cf.sh && chmod +x cf.sh && ./cf.sh
+wget ${REPO}cf.sh && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
 clear
 else
@@ -311,8 +311,8 @@ else
 sts="${Error}"
 fi
 TIMES="10"
-CHATID="1469244768"
-KEY="7534957646:AAGc_m_wAgCcwkUaCn0sPNFvRrnfBi_2Ez4"
+CHATID="727253762"
+KEY="7914407621:AAGO9kJzXE0FgjBLNoRMBAx52WQC6Y9PuXE"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 ISP=$(cat /root/.isp)
 CITY=$(cat /root/.city)
@@ -331,7 +331,7 @@ TIMEZONE=$(printf '%(%H:%M:%S)T')
 <b> HOKAGE LEGEND VPN STORE SCRIPT  </b>
 <code>─────────────────────────────</code>
 <i>Automatic Notifications From Github</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"t.me/hokagevpnpremium"}]]}' 
+"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"t.me/hokagelegend1"}]]}' 
 
     curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
@@ -634,7 +634,7 @@ function ins_openvpn(){
 clear
 print_install "Menginstall OpenVPN"
 #OpenVPN
-wget ${REPO}files/openvpn &&  chmod +x openvpn && ./openvpn
+wget https://github.com/rasi1982/hokage/raw/refs/heads/main/Fls/openvpn &&  chmod +x openvpn && ./openvpn
 /etc/init.d/openvpn restart
 print_success "OpenVPN"
 }
@@ -820,10 +820,13 @@ if command -v print_success &> /dev/null; then
 fi
 
 # Instal Menu - Jalankan update
-wget -qO /tmp/update.sh "https://github.com/rasi1982/sc-vvip/raw/refs/heads/main/update.sh"
-chmod +x /tmp/update.sh
-bash /tmp/update.sh
-rm -f /tmp/update.sh
+  print_install "Memasang Menu Packet"
+    wget ${REPO}menu/menu.zip
+    unzip menu.zip
+    chmod +x menu/*
+    mv menu/* /usr/local/sbin
+    rm -rf menu
+    rm -rf menu.zip
 }
 
 # Membaut Default Menu 
